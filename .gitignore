@@ -1,0 +1,4 @@
+#put in slash to ignore everything following item/folder/etc.
+
+.venv/
+.venv_dj/
