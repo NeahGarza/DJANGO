@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #My Apps
+    'MainApp',
+    'users',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,8 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 
-    #My Apps
-    'MainApp',
+    
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Automatically redirect non-users to login page if they aren't signed in (and trying to acess something they can't)
+LOGIN_URL = 'users:login'
